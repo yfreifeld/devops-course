@@ -1,5 +1,6 @@
 docker pull ubuntu:latest
-docker run  --name devops2912 -d ubuntu:latest sleep 100000000000
+docker run -dit --name devops2912 ubuntu:latest bash
+docker exec -it devops2912 bash 
 env
 pwd
 cd
@@ -8,3 +9,8 @@ echo
 cat
 cp
 mv
+cd /root
+touch file1.txt 
+mkdir temp 
+cp file1.txt file2.txt 
+mv file1.txt temp/
