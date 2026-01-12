@@ -1,0 +1,25 @@
+git clone https://github.com/yfreifeld/gitclass.git 
+cd gitclass/
+ls
+vi Dockerfile 
+git status 
+git add Dockerfile 
+git status 
+git commit Dockerfile 
+git commit Dockerfile -m "adding new file Dockerfile "
+git status 
+git push 
+git branch branch1 
+git branch 
+git branch -a 
+git checkout branch1 
+git branch 
+ls
+vi Dockerfile 
+git status 
+git diff 
+git commit Dockerfile -m "adding WORKDIR and COPY commands"
+git status 
+git log 
+git status 
+git push -u origin branch1 
