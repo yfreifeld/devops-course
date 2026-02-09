@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+      - dev
 
 jobs:
   ci:
@@ -14,10 +14,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python 3.11
+        if: github.ref == 'refs/heads/main'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: set up python 3.12
+        if: github.ref == 'refs/heads/dev'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
       # - name: Install dependencies
       #   run: pip install -r requirements.txt
