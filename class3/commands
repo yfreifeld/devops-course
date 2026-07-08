@@ -1,7 +1,7 @@
+# here are the commands to be executed in the terminal for the gitclass repository
 git clone https://github.com/yfreifeld/gitclass.git 
 cd gitclass/
 ls
-vi Dockerfile 
 git status 
 git add Dockerfile 
 git status 
